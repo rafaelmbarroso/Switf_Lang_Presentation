@@ -10,7 +10,7 @@ https://www.swift.org/documentation/
 
 #### Known info
 - Objective C replacement
-  - Has a lot of C bindings
+  - "An Objective-C replacement without the C baggage"
   - Built up from LLVM
 - Developed by Apple engineer Chris Lattner
 - "Designed to be safe, fast, and expressive
