@@ -16,7 +16,7 @@ class computerModel {
     } 
 }
 
-class macbook: computerModel {
+class appleComputer: computerModel {
     var year: Int
 
     init(model: String, cpu: String, display: String, os: String, year: Int) {
@@ -34,12 +34,12 @@ class pcLaptop: computerModel {
     }
 }
 
-let macbookPro = macbook(model: "MacBook Pro", cpu: "Apple M5 Max", display: "16 inch Retina Display", os: "macOS Tahoe", year: 2025)
-let pcLaptop = pcLaptop(model: "PC Laptop", cpu: "Intel Ultra 9", display: "15 inch Full HD", os: "Windows 11", gpu: "NVIDIA GTX 5070TI")
+let macbookPro = appleComputer(model: "Macbook Pro", cpu: "Apple M5 Max", display: "16 inch Retina Display", os: "macOS Tahoe", year: 2025)
+let anyPcLaptop = pcLaptop(model: "PC Laptop", cpu: "Intel Core i9-13900K", display: "17 inch 4K Display", os: "Windows 11 Pro", gpu: "NVIDIA GeForce RTX 4090")
 
-print("MacBook Pro: \(macbookPro.model), CPU: \(macbookPro.cpu), Display: \(macbookPro.display), OS: \(macbookPro.os), Year: \(macbookPro.year)")
-print("PC Laptop: \(pcLaptop.model), CPU: \(pcLaptop.cpu), Display: \(pcLaptop.display), OS: \(pcLaptop.os), GPU: \(pcLaptop.gpu)")
-
+print("=== Inheritance ===")
+print("Macbook Pro: \(macbookPro.model), CPU: \(macbookPro.cpu), Display: \(macbookPro.display), OS: \(macbookPro.os), Year: \(macbookPro.year)")
+print("PC Laptop: \(anyPcLaptop.model), CPU: \(anyPcLaptop.cpu), Display: \(anyPcLaptop.display), OS: \(anyPcLaptop.os), GPU: \(anyPcLaptop.gpu)")
 
 // == Generics ==
 
@@ -54,12 +54,17 @@ func swapValues<T>(_ a: inout T, _ b: inout T) {
 
 var x = 5
 var y = 10
+
+print("\n")
+print("=== Generics ===")
 print("Before swap: x = \(x), y = \(y)")
 swapValues(&x, &y)
 print("After swap: x = \(x), y = \(y)")
 
 var str1 = "Hello"
 var str2 = "World"
+
+print("\n")
 print("Before swap: str1 = \(str1), str2 = \(str2)")
 swapValues(&str1, &str2)
 print("After swap: str1 = \(str1), str2 = \(str2)")
